@@ -6,7 +6,7 @@ This respository contains python codes of the paper. It is developped and tested
 - tensorflow >= 1.4
 - tfplot (for visualization on tf summary files)
 - numpy
-- opencv2 (optional, for cpu visualization) 
+- opencv >= 2.4 (optional, for cpu visualization) 
 
 ## Data Preparations:
 Download the datasets, create soft links for them to [exp/data](./exp/data) and run data/$dataset.py to create the TFRecord files. Details is described in [here](./exp/data).
@@ -19,7 +19,7 @@ python model/hourglass_um_crop_tiny.py --dataset 'icvl' --batch_size 40 --num_st
 where the hyper parameter configuration is explained in the source python files.
 
 ## Results:
-We provide the estimation results by the proposed method for [ICVL](./exp/result/icvl.txt), [NYU](./exp/result/nyu.txt), [MSRA15](./exp/result/msra.txt). They are xyz coordinates in mm, the 2D projection method is in the function _xyz2uvd_ from [this file](data/util.py)
+We provide the estimation results by the proposed method for [ICVL](./exp/result/icvl.txt), [NYU](./exp/result/nyu.txt), [MSRA15](./exp/result/msra.txt). They are xyz coordinates in mm, the 2D projection method is in the function _xyz2uvd_ from [here](data/util.py#L23)
 
 ## Pretrained Models:
 Coming soon
