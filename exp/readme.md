@@ -1,0 +1,3 @@
+- [data](./data) holds datasets
+- [train\_cache](./train_cache) holds saved models, tensorflow summaries and training logs
+- [result](./result) holds the predicted 3D coordinates of the corresponding dataset 
