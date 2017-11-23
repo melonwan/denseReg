@@ -2,6 +2,8 @@
 
 This respository contains python codes of the paper. It is developped and tested on Debian GNU/Linux 8 64-bit.
 
+![Results](doc/result.png)
+
 ## Requirements:
 - tensorflow >= 1.3
 - tfplot (for visualization on tf summary files)
