@@ -1,4 +1,5 @@
 '''provide a multi-thread training scheme
+WARNING: this file is still under development, is not guaranteed to work.
 '''
 from __future__ import print_function, absolute_import, division
 
@@ -11,10 +12,6 @@ from datetime import datetime
 import model.memory_util as memory_util
 
 FLAGS = tf.app.flags.FLAGS
-
-# def _tower_loss(dms, poses, scope, reuse_variables=None):
-    # with tf.variable_scope(tf.get_variable(), reuse=reuse_variables):
-        # logits = 
 
 def _average_gradients(tower_grads):
     '''calcualte the average gradient for each shared variable across all towers on multi gpus

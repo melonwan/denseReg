@@ -37,6 +37,8 @@ tf.app.flags.DEFINE_integer('sub_batch', 5,
                            '''batch size''')
 tf.app.flags.DEFINE_integer('pid', 0,
                            '''for msra person id''')
+tf.app.flags.DEFINE_boolean('is_train', True,
+                            '''True for traning, False for testing''')
 
 # the network architecture to be used
 tf.app.flags.DEFINE_string('net_module', 'um_v1',
@@ -901,5 +903,7 @@ if __name__ == '__main__':
         dataset = data.msra.MsraDataset('training', FLAGS.pid)
         val_dataset = data.msra.MsraDataset('testing', FLAGS.pid)
 
-    # run_train(dataset, val_dataset)
-    run_test(dataset, val_dataset, -1)
+    if FLAGS.is_train:
+        run_train(dataset, val_dataset)
+    else:
+        run_test(dataset, val_dataset, -1)
