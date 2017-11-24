@@ -9,7 +9,7 @@ This respository contains python codes of the paper. It is developped and tested
 - opencv >= 2.4 (optional, for cpu visualization) 
 
 ## Data Preparations:
-Download the datasets, create soft links for them to [exp/data](./exp/data) and run data/$dataset.py to create the TFRecord files. Details is described in [here](./exp/data).
+Download the datasets, create soft links for them to [exp/data](./exp/data) and run data/$dataset.py to create the TFRecord files. Details is described [here](./exp/data).
 
 ## Usage:
 Both training and testing function is provided by >model/hourglass\_um\_crop\_tiny.py<. Here is an example:
