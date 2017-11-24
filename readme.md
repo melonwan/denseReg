@@ -3,7 +3,7 @@
 This respository contains python codes of the paper. It is developped and tested on Debian GNU/Linux 8 64-bit.
 
 ## Requirements:
-- tensorflow >= 1.3
+- tensorflow == 1.3
 - tfplot (for visualization on tf summary files)
 - numpy
 - opencv >= 2.4 (optional, for cpu visualization) 
