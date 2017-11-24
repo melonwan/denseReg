@@ -12,7 +12,7 @@ This respository contains python codes of the paper. It is developped and tested
 Download the datasets, create soft links for them to [exp/data](./exp/data) and run data/$dataset.py to create the TFRecord files. More details are [here](./exp/data).
 
 ## Usage:
-Both training and testing function is provided by >model/hourglass\_um\_crop\_tiny.py<. Here is an example:
+Both training and testing function is provided by `model/hourglass\_um\_crop\_tiny.py`. Here is an example:
 ```bash
 python model/hourglass_um_crop_tiny.py --dataset 'icvl' --batch_size 40 --num_stack 2 --fea_num 128 --debug_level 2 --is_traing True
 ```
