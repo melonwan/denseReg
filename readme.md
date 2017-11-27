@@ -21,7 +21,7 @@ python model/hourglass_um_crop_tiny.py --dataset 'icvl' --batch_size 40 --num_st
 where the hyper parameter configuration is explained in the source python files.
 
 ## Results:
-We provide the estimation results by the proposed method for [ICVL](./exp/result/icvl.txt), [NYU](./exp/result/nyu.txt), [MSRA15](./exp/result/msra.txt). They are xyz coordinates in mm, the 2D projection method is in the function _xyz2uvd_ from [here](data/util.py#L23)
+We provide the estimation results by the proposed method for [ICVL](./exp/result/icvl.txt), [NYU](./exp/result/nyu.txt), [MSRA15](./exp/result/msra.txt). They are xyz coordinates in mm, the 2D projection method is in the function _xyz2uvd_ from [here](data/util.py#L23). Check [here](https://github.com/xinghaochen/awesome-hand-pose-estimation/tree/master/evaluation) for comparison to other methods. Thanks @xinghaochen for providing the comparison.
 
 ## Pretrained Models:
 Run the script to download and install the corresponding datasets. $ROOT denote the root path of this project.
