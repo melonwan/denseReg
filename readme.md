@@ -11,7 +11,7 @@ This respository contains tensorflow implementation of the [paper](https://arxiv
 - opencv >= 2.4 (optional, for cpu visualization) 
 
 ## Data Preparations:
-Download the datasets, create soft links for them to [exp/data](./exp/data) and run `python data/${dataset.py}` to create the TFRecord files. Details are [here](./exp/data).
+Download the datasets, create soft links for them to [exp/data](./exp/data) and run `python data/${dataset}.py` to create the TFRecord files. Details are [here](./exp/data).
 
 ## Usage:
 Both training and testing functions are provided by `model/hourglass_um_crop_tiny.py`. Here is an example:
