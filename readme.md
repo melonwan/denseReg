@@ -1,18 +1,19 @@
 # Dense 3D Regression for Hand Pose Estimation
 
-This respository contains python codes of the paper. It is developped and tested on Debian GNU/Linux 8 64-bit.
+This respository contains tensorflow implementation of the [paper](https://arxiv.org/abs/1711.08996). It is developped and tested on Debian GNU/Linux 8 64-bit.
 
 ## Requirements:
+- python 2.7
 - tensorflow >= 1.3
-- tfplot (for visualization on tf summary files)
+- [tfplot](https://github.com/wookayin/tensorflow-plot) (for visualization on tf summary files)
 - numpy
 - opencv >= 2.4 (optional, for cpu visualization) 
 
 ## Data Preparations:
-Download the datasets, create soft links for them to [exp/data](./exp/data) and run data/$dataset.py to create the TFRecord files. Details is described in [here](./exp/data).
+Download the datasets, create soft links for them to [exp/data](./exp/data) and run data/$dataset.py to create the TFRecord files. Details are in [here](./exp/data).
 
 ## Usage:
-Both training and testing function is provided by >model/hourglass\_um\_crop\_tiny.py<. Here is an example:
+Both training and testing function is provided by `model/hourglass_um_crop_tiny.py`. Here is an example:
 ```bash
 python model/hourglass_um_crop_tiny.py --dataset 'icvl' --batch_size 40 --num_stack 2 --fea_num 128 --debug_level 2 --is_traing True
 ```
