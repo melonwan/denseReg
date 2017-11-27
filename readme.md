@@ -3,29 +3,16 @@
 This respository contains tensorflow implementation of the [paper](https://arxiv.org/abs/1711.08996). It is developped and tested on Debian GNU/Linux 8 64-bit.
 
 ## Requirements:
-<<<<<<< HEAD
 - python 2.7
-- tensorflow >= 1.3
-- [tfplot](https://github.com/wookayin/tensorflow-plot) (for visualization on tf summary files)
-=======
 - tensorflow == 1.3
-- tfplot (for visualization on tf summary files)
->>>>>>> 200c327b6b0d17ca24f713f34db7ce2946b2bb15
+- [tfplot](https://github.com/wookayin/tensorflow-plot) (for visualization on tf summary files)
+- matplotlib >= 2.0.2 
 - numpy
 - opencv >= 2.4 (optional, for cpu visualization) 
 
 ## Data Preparations:
-<<<<<<< HEAD
-Download the datasets, create soft links for them to [exp/data](./exp/data) and run data/$dataset.py to create the TFRecord files. Details are in [here](./exp/data).
-
 ## Usage:
-Both training and testing function is provided by `model/hourglass_um_crop_tiny.py`. Here is an example:
-=======
-Download the datasets, create soft links for them to [exp/data](./exp/data) and run data/$dataset.py to create the TFRecord files. More details are [here](./exp/data).
-
-## Usage:
-Both training and testing functions are provided by `model/hourglass\_um\_crop\_tiny.py`. Here is an example:
->>>>>>> 200c327b6b0d17ca24f713f34db7ce2946b2bb15
+Both training and testing functions are provided by `model/hourglass_um_crop_tiny.py`. Here is an example:
 ```bash
 python model/hourglass_um_crop_tiny.py --dataset 'icvl' --batch_size 40 --num_stack 2 --fea_num 128 --debug_level 2 --is_train True
 ```
@@ -38,9 +25,9 @@ We provide the estimation results by the proposed method for [ICVL](./exp/result
 Run the script to download and install the corresponding datasets. $ROOT denote the root path of this project.
 ```bash
 cd $ROOT
-bash ./exp/scripts/fetch_icvl_models.sh
-bash ./exp/scripts/fetch_msra_models.sh
-bash ./exp/scripts/fetch_nyu_models.sh
+./exp/scripts/fetch_icvl_models.sh
+./exp/scripts/fetch_msra_models.sh
+./exp/scripts/fetch_nyu_models.sh
 ```
 To perform testing, simply run
 ```
