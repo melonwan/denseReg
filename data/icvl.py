@@ -4,7 +4,7 @@ from data.dataset_base import *
 from data.dataset_base import _float_feature, _bytes_feature
 import data.dataset_base
 import scipy.io as sio
-from data.preprocess import crop_from_xyz_pose, crop_from_uvd_pose, crop_from_bbx, center_of_mass
+from data.preprocess import crop_from_xyz_pose, crop_from_bbx, center_of_mass
 from data.util import uvd2xyz, xyz2uvd 
 Annotation = data.dataset_base.Annotation
 
