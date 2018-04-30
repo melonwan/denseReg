@@ -17,7 +17,8 @@ class NyuDataset(BaseDataset):
     
     '''nyu hand dataset contrains train, test sub-directories, both with annotated joint
     '''
-    directory = './exp/data/nyu/'
+    # directory = './exp/data/nyu/'
+    directory = '/srv/glusterfs/wanc/data/nyu/'
 
     def __init__(self, subset):
         if not subset in set(['training', 'training_small', 'validation', 'testing']):
@@ -107,19 +108,19 @@ class NyuDataset(BaseDataset):
 
         if self.subset == 'testing':
             with open('data/nyu_bbx.pkl', 'rb') as f:
-                bbxes = cPickle.load(f)
+                bbxes = [cPickle.load(f)]
 
         self._annotations = []
         if self.subset == 'testing':
             for c_j, c_n, c_b in zip(joints, names, bbxes):
-                for j, n in zip(c_j, c_n):
+                for j, n, b in zip(c_j, c_n, c_b):
                     j = j.reshape((-1,3))
                     j[:,1] *= -1.0
                     j = j.reshape((-1,))
                     if is_trun:
                         j = j[self.keep_pose_idx]
-                    c_b = np.asarray(c_b).reshape((-1,))
-                    self._annotations.append(Annotation(n, j.reshape((-1,)), c_b))
+                    b = np.asarray(b).reshape((-1,))
+                    self._annotations.append(Annotation(n, j.reshape((-1,)), b))
         else:
             for c_j, c_n in zip(joints, names):
                 for j, n in zip(c_j, c_n):
@@ -299,8 +300,8 @@ class NyuDataset(BaseDataset):
                                                         is_train)
 
 def saveTFRecord():
-    reader = NyuDataset('training')
-    reader.write_TFRecord_multi_thread(num_threads=30, num_shards=300)
+    # reader = NyuDataset('training')
+    # reader.write_TFRecord_multi_thread(num_threads=30, num_shards=300)
 
     reader = NyuDataset('testing')
     reader.write_TFRecord_multi_thread(num_threads=16, num_shards=16)
